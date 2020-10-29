@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d34fb4d64751caf8bdcd812168446ac4",
+    "content-hash": "6cf147c15486a30ff92fc50382c4226a",
     "packages": [
         {
             "name": "backpack/crud",

@@ -16,7 +16,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/item', 'ItemController@index');
 
-Route::post('/add', 'ItemController@add');
+Route::get('/property', 'ItemController@property');
+Route::get('/contact', 'ItemController@contact');
+Route::get('/region', 'ItemController@region');
+Route::get('/getdata', 'ItemController@getdata');
 
