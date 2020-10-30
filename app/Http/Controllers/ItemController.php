@@ -76,9 +76,9 @@ class ItemController extends Controller
                  return $validator->messages();
             }
             $name=$request->post('name');
-            $region = Region::where('name',$name)->get();
-            $property = Property::where('name',$name)->get();
-            $contact = Contact::where('first_name',$name)->get();
+            $region = Region::where('name','like', '%' . $name. '%')->get();
+            $property = Property::where('name','like', '%' . $name . '%')->with('region')->get();
+            $contact = Contact::where('first_name','like', '%' . $name . '%')->get();
             
             if($region){
                 $response['success'] = TRUE;

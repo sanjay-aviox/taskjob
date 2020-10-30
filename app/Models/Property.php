@@ -27,8 +27,17 @@ class Property extends Model
     |--------------------------------------------------------------------------
     | FUNCTIONS
     |--------------------------------------------------------------------------
-    */
 
+
+    */
+    public function region()
+    {
+        return $this->belongsTo('App\Models\Region');
+    }
+     public function contact()
+    {
+        return $this->belongsTo('App\Models\Contact');
+    }
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
@@ -52,4 +61,6 @@ class Property extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+
+
 }
