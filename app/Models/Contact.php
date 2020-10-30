@@ -60,7 +60,7 @@ class Contact extends Model
         $disk = "public/contact";
         $destination_path = "/public/contact";       
         $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
-
+    }
     public function property()
     {
         return $this->hasMany('App\Models\Property','contact_id','id');

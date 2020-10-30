@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\ContactRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 /**
  * Class ContactCrudController
@@ -59,6 +60,7 @@ class ContactCrudController extends CrudController
         CRUD::setValidation(ContactRequest::class);
 
      //   CRUD::setFromDb(); // fields
+              CRUD::setValidation(ContactRequest::class);
         CRUD::field('first_name')->type('text');
         CRUD::field('last_name')->type('text');
         CRUD::field('email')->type('text');
