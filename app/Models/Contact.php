@@ -52,4 +52,9 @@ class Contact extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+
+    public function property()
+    {
+        return $this->hasMany('App\Models\Property','contact_id','id');
+    }
 }
