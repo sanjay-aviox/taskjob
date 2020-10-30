@@ -24,7 +24,7 @@ class CreatePropertiesTable extends Migration
             $table->string('country')->nullable();
             $table->BigInteger('contact_id')->unsigned();
             $table->foreign('contact_id')->references('id')->on('contacts'); 
-            $table->string('image')->nullable();
+            $table->text('img')->nullable();
             $table->timestamps();
         });
     }

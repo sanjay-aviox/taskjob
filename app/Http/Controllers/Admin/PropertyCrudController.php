@@ -58,7 +58,17 @@ class PropertyCrudController extends CrudController
     {
         CRUD::setValidation(PropertyRequest::class);
 
-        CRUD::setFromDb(); // fields
+       // CRUD::setFromDb(); // fields
+
+        CRUD::field('name')->type('text');
+        CRUD::field('address')->type('text');
+        CRUD::field('suburd')->type('text');
+        CRUD::field('state')->type('text');
+        CRUD::field('region_id')->type('select');
+        CRUD::field('country')->type('text');
+        CRUD::field('contact_id')->type('select');
+        CRUD::field('img')->type('image');
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

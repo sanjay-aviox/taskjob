@@ -52,4 +52,12 @@ class Contact extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+
+    public function setImageAttribute($value)
+    {
+        $attribute_name = "photos";
+        $disk = "public/contact";
+        $destination_path = "/public/contact";       
+        $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+    }
 }

@@ -19,7 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('email')->unique();
             $table->string('phone')->nullable();
-            $table->string('photos')->nullable();
+            $table->text('photos')->nullable();
             $table->timestamps();
         });
     }

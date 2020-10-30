@@ -58,7 +58,12 @@ class ContactCrudController extends CrudController
     {
         CRUD::setValidation(ContactRequest::class);
 
-        CRUD::setFromDb(); // fields
+     //   CRUD::setFromDb(); // fields
+        CRUD::field('first_name')->type('text');
+        CRUD::field('last_name')->type('text');
+        CRUD::field('email')->type('text');
+        CRUD::field('phone')->type('text');
+        CRUD::field('photos')->type('image');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
