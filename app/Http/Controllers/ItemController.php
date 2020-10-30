@@ -76,9 +76,10 @@ class ItemController extends Controller
                  return $validator->messages();
             }
             $name=$request->post('name');
-            $region = Region::where('name','like', '%' . $name. '%')->get();
-            $property = Property::where('name','like', '%' . $name . '%')->with('region')->get();
-            $contact = Contact::where('first_name','like', '%' . $name . '%')->get();
+            $region = Region::where('name','like', '%' .$name. '%')->get();
+            $contact = Contact::where('first_name','like', '%' .$name. '%')->with('property')->get();
+            $property = Property::where('name','like', '%' . $name. '%')->with('region')->with('contact')->get();
+         
             
             if($region){
                 $response['success'] = TRUE;
